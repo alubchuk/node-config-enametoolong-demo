@@ -40,7 +40,7 @@ cannot be read. Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: nam
 ```bash
 Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: name too long
 ```
-5. By default the length of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Rename `ab.json` file to `b.json` and run script again. Make sure you don't see that error any more.
+5. By default the length of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Check `longPathLength` variable that is logged in terminal, which value it contains. Then rename some of the files so that `longPathLength` is less than 1024, i.e. `ab.json` file to `b.json` and run script again. Make sure you don't see that error any more.
 
 6. Values of PATH_MAX and NAME_MAX are printed out for debug purposes using python `os` module (python 2 should be installed on your system).
 
