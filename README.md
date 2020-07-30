@@ -3,7 +3,7 @@ This project demonstrates `ENAMETOOLONG` OS level error
 which sometimes happens to occur in `node-config` library.
 
 ## Recommendations
-It's better to run this code on OS X system which has Python installed (Linux should also work, but I didn't test this script there, however I know thet Linux has usually 4096 bytes limitation for PATH_MAX).
+It's better to run this code on OS X system which has Python installed (Linux should also work, but I didn't test this script there, however I know that Linux has usually 4096 bytes limitation for PATH_MAX).
 
 ## Steps to reproduce
 1. Clone the project
