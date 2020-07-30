@@ -2,6 +2,10 @@
 This project demonstrates `ENAMETOOLONG` OS level error 
 which sometimes happens to occur in `node-config` library.
 
+## Prerequisites
+- Multiple configuration files (around 10 or more)
+- Deep directory nesting. You should clone this repo deeper enough so that your filenames become quite long to eventually produce this bug (don't place it on the HOME dir level, it should be deeper)
+
 ## Recommendations
 It's better to run this code on OS X system which has Python installed (Linux should also work, but I didn't test this script there, however I know that Linux has usually 4096 bytes limitation for PATH_MAX).
 
@@ -36,7 +40,7 @@ cannot be read. Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: nam
 ```bash
 Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: name too long
 ```
-5. By default the lenght of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Rename `ab.json` file to `b.json` and run script again. Make sure you don't see that error any more.
+5. By default the length of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Rename `ab.json` file to `b.json` and run script again. Make sure you don't see that error any more.
 
 6. Values of PATH_MAX and NAME_MAX are printed out for debug purposes using python `os` module (python 2 should be installed on your system).
 
