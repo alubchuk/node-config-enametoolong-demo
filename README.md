@@ -12,19 +12,31 @@ It's better to run this code on OS X system which has Python installed (Linux sh
 ## Steps to reproduce
 1. Clone the project
 2. Run `npm i`
-3. Execute `node src/index.js` in terminal and check the error message which looks like this:
+3. Execute `npm start` in terminal and check the error message which looks like this:
 
 ```bash
 { MAX_PATH: 1024, MAX_FILENAME: 255 }
+{ paths:
+   [ 'environment-000',
+     'environment-001',
+     'environment-002',
+     'environment-003',
+     'environment-04',
+     'environment-05',
+     'environment-06',
+     'environment-07',
+     'environment-08',
+     'environment-09',
+     'environment-10',
+     'environment-11' ] }
 { longPath:
-   '/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/a.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/ab.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstu-8.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-1.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-2.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-3.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-4.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-5.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-6.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-7.json',
+   '/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-000:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-001:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-002:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-003:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-04:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-05:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-06:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-07:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-08:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-09:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-10:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-11',
   longPathLength: 1024 }
 /Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/node_modules/config/lib/config.js:771
       throw new Error('Config file ' + fullFilename + ' cannot be read. Error code is: '+e2.code
       ^
 
-Error: Config file /Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/a.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/ab.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstu-8.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-1.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-2.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-3.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-4.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-5.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-6.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-7.json/runtime.json 
-cannot be read. Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: name too long, open '/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/a.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/ab.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstu-8.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-1.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-2.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-3.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-4.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-5.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-6.json:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-7.json/runtime.json'
+Error: Config file /Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-000:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-001:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-002:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-003:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-04:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-05:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-06:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-07:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-08:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-09:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-10:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-11/runtime.json cannot be read. Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: name too long, open '/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-000:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-001:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-002:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-003:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-04:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-05:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-06:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-07:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-08:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-09:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-10:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-11/runtime.json'
     at Config.util.parseFile (/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/node_modules/config/lib/config.js:771:13)
     at Config.util.loadFileConfigs (/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/node_modules/config/lib/config.js:648:26)
     at new Config (/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/node_modules/config/lib/config.js:116:27)
@@ -38,19 +50,20 @@ cannot be read. Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: nam
 ```
 4. Pay attention to this part:
 ```bash
-Error: Config file /Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/a.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/ab.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstu-8.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-1.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-2.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-3.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-4.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-5.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-6.json
-:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-7.json/runtime.json 
-cannot be read. Error code is: ENAMETOOLONG.
+Error: Config file /Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-000
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-001
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-002
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-003
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-04
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-05
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-06
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-07
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-08
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-09
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-10
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/environment-11/runtime.json cannot be read. Error code is: ENAMETOOLONG.
 ```
-5. By default the length of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Check `longPathLength` variable that is logged in terminal, which value it contains. Then rename some of the files so that `longPathLength` is less than 1024, i.e. `ab.json` file to `b.json` and run script again. Make sure you don't see that error any more.
+5. By default the length of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Check `longPathLength` variable that is logged in terminal, which value it contains. Then rename some of the subfolders so that `longPathLength` is less than 1024, i.e. `environment-000` dir to `environment-00` and run script again. Make sure you don't see that error any more.
 
 6. Values of PATH_MAX and NAME_MAX are printed out for debug purposes using python `os` module (python 2 should be installed on your system).
 
