@@ -38,7 +38,17 @@ cannot be read. Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: nam
 ```
 4. Pay attention to this part:
 ```bash
-Error code is: ENAMETOOLONG. Error message is: ENAMETOOLONG: name too long
+Error: Config file /Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/a.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/ab.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstu-8.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-1.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-2.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-3.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-4.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-5.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-6.json
+:/Users/alexlubchuk/open-source/issues/node-config-enametoolong-issue/src/abcdefghijklmnopqrstuvwqyz-7.json/runtime.json 
+cannot be read. Error code is: ENAMETOOLONG.
 ```
 5. By default the length of the filenames is configured in such a way that it fails for filenames that has 1024 bytes long (OS X default PATH_MAX value). Check `longPathLength` variable that is logged in terminal, which value it contains. Then rename some of the files so that `longPathLength` is less than 1024, i.e. `ab.json` file to `b.json` and run script again. Make sure you don't see that error any more.
 
