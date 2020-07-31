@@ -3,7 +3,7 @@ This project demonstrates `ENAMETOOLONG` OS level error
 which sometimes happens to occur in `node-config` library.
 
 ## Prerequisites
-- Multiple configuration files (around 10 or more)
+- Multiple configuration subfolders (around 10 or more)
 - Deep directory nesting. You should clone this repo deeper enough so that your filenames become quite long to eventually produce this bug (don't place it on the HOME dir level, it should be deeper)
 
 ## Recommendations
